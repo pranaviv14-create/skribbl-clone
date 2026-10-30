@@ -1,0 +1,23 @@
+{
+  "name": "skribbl-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Full-stack multiplayer drawing and guessing game inspired by skribbl.io",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "client": "npm run dev --prefix client",
+    "build:client": "npm run build --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.8.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
