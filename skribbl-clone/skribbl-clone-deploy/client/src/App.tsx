@@ -69,7 +69,9 @@ export const App: React.FC = () => {
 
   // Connect socket
   useEffect(() => {
-    const socketUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : '/';
+    const socketUrl = window.location.hostname === 'localhost'
+  ? 'http://localhost:3001'
+  : 'https://skribbl-backend-xh2u.onrender.com';
     const socket = io(socketUrl, {
       transports: ['websocket', 'polling']
     });
